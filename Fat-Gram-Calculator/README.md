@@ -5,7 +5,7 @@ Design a program that asks for the number of fat grams and calculates the calori
 According to nutritional formulas, the number of (total) calories MUST exceed fat grams X 9 (otherwise the meal is ALL fat).  
 Make sure that the number of (total) calories entered IS greater than fat grams X 9.
 Once correct data has been entered the program should calculate and display the percentage of calories that come from fat.  
-Use the following formula:
+##### Use the following formula:
 Percent of calories from fat = (Fat grams X 9) / Calories
 Some nutritionist classify a food as "low fat" if less than 30 percent of the calories come from fat.  
 If the results of this formula are less than 0.3, the program should display a message indicating the food is low fat.
