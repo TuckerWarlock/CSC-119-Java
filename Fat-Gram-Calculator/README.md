@@ -1,4 +1,4 @@
-# 3 Fat Gram Calculator
+# Fat Gram Calculator
 Design a program that asks for the number of fat grams and calculates the calories in a food item.  Validate the input as follows:
 
 > Make sure the number of fat grams and calories is not less than 0.
