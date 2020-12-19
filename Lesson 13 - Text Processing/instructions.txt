@@ -1,0 +1,102 @@
+Password Weakness Detector
+
+ 
+
+Design a program that asks the user to enter a password, and then analyzes the password for the following weakness:
+
+ 
+
+Fewer than 8 characters
+Does not contain at least one uppercase letter and one lowercase letter
+Does not contain at least one numeric digit
+Does not contain at least one special character (a character that is not a letter of a numeric digit)
+Is a sequence of consecutive uppercase letters (such as ABCDE)
+Is a sequence of consecutive lowercase letters (such as abcde)
+Is a sequence of consecutive numeric digits (such as 12345)
+Is a repeating sequence of more than 2 characters (such as ZZZ or 555)
+ 
+
+HINT:
+
+The first several tests are fairly straight forward because the length is easy to find and the others can be determined by testing each character in the string individually.  However finding consecutive characters and repeating characters is a bit more challenging because it requires comparing the current character to the next (at least the way I did it). 
+
+ 
+
+My approach for consecutive and repeating characters (you may have something even better):
+
+I set up some threshold CONSTANTS to describe the maximum number of consecutive characters and repeating characters.  Thinking that double characters are not uncommon in words, I set the maximum repeating limit to 2.  I set the maximum consecutive characters to 2 as well (but it can be anything). 
+
+ 
+
+One might argue that having recognizable words embedded in a password is also a weakness.  Perhaps, but they help me to remember the password.  I haven’t seen a password strength checker yet that prevents it or double characters. 
+
+ 
+
+To discover consecutive and repeating characters, I looped through the string and compared each character to the next.  This isn’t too bad if you use Character.compare(firstChar, secondChar).  However, that doesn’t help to discover consecutive characters.  This is why I used Character.valueOf(aChar), which returns the decimal value of each character (see the ASCII table in the textbook appendix).  For example, the decimal values for the string “abc” are 97, 98 and 99.  Each one is one more than the last.  I used this fact to determine if a pair of characters are consecutive.  One plus the decimal value of the first character will be equal to the decimal value of the next.  I used a counter to record the number of consecutive matches.  When that number exceeds the threshold CONSTANT, I have identified this weakness in the string. 
+
+ 
+
+CAUTION:
+
+When comparing each character to the next, make sure to NOT index a next character that is past the end of the string (out of bounds).
+A candidate password may contain more than one sequence of consecutive or repeating characters (see example output). 
+Example output:
+
+Password Weakness Detector
+Enter a password to test(eee to QUIT)
+qwerty
+A valid password will have at least 8 characters.
+A valid password will have at least 1 uppercase characters.
+A valid password will have at least 1 numeric characters.
+A valid password will have at least 1 special characters.
+Enter a password to test(eee to QUIT)
+QWERTY
+A valid password will have at least 8 characters.
+A valid password will have at least 1 lowercase characters.
+A valid password will have at least 1 numeric characters.
+A valid password will have at least 1 special characters.
+Enter a password to test(eee to QUIT)
+Qwerty
+A valid password will have at least 8 characters.
+A valid password will have at least 1 numeric characters.
+A valid password will have at least 1 special characters.
+Enter a password to test(eee to QUIT)
+Qwerty1
+A valid password will have at least 8 characters.
+A valid password will have at least 1 special characters.
+Enter a password to test(eee to QUIT)
+Qwerty1@
+This is a good password.
+Enter a password to test(eee to QUIT)
+AB12dexy#
+This is a good password.
+Enter a password to test(eee to QUIT)
+ABC12dexy#
+A valid password will have no more than 2 consecutive numbers or letters.
+Enter a password to test(eee to QUIT)
+AB123dexy#
+A valid password will have no more than 2 consecutive numbers or letters.
+Enter a password to test(eee to QUIT)
+AB12defxy#
+A valid password will have no more than 2 consecutive numbers or letters.
+Enter a password to test(eee to QUIT)
+AB12dexyz#
+A valid password will have no more than 2 consecutive numbers or letters.
+Enter a password to test(eee to QUIT)
+AA11ddxx$
+This is a good password.
+Enter a password to test(eee to QUIT)
+AAA11ddxx$
+A valid password will have no more than 2 consecutive repeated numbers or letters.
+Enter a password to test(eee to QUIT)
+AA111ddxx$
+A valid password will have no more than 2 consecutive repeated numbers or letters.
+Enter a password to test(eee to QUIT)
+AA11dddxx$
+A valid password will have no more than 2 consecutive repeated numbers or letters.
+Enter a password to test(eee to QUIT)
+AA11ddxxx$
+A valid password will have no more than 2 consecutive repeated numbers or letters.
+Enter a password to test(eee to QUIT)
+eee
+Good Bye

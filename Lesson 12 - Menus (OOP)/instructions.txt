@@ -1,0 +1,121 @@
+Modify the given example solution to add three more menu items to the menu,...  (5 points)
+
+kilometers to nautical miles.
+kilometers to astromomical units.
+Convert meters to yards.
+
+example output:
+
+1. Convert inches to centimeters.
+2. Convert feet to meters.
+3. Convert miles to kilometers.
+4. Convert kilometers to nautical miles.
+5. Convert kilometers to astromomical units.
+6. Convert meters to yards.
+7. QUIT
+
+Enter from 1 to 7: 1
+Enter the number of inches to convert: 1
+That is equal to 2.54 centimeters.
+
+1. Convert inches to centimeters.
+2. Convert feet to meters.
+3. Convert miles to kilometers.
+4. Convert kilometers to nautical miles.
+5. Convert kilometers to astromomical units.
+6. Convert meters to yards.
+7. QUIT
+
+Enter from 1 to 7: 2
+Enter the number of feet to convert: 1
+That is equal to 0.3048 meters.
+
+1. Convert inches to centimeters.
+2. Convert feet to meters.
+3. Convert miles to kilometers.
+4. Convert kilometers to nautical miles.
+5. Convert kilometers to astromomical units.
+6. Convert meters to yards.
+7. QUIT
+
+Enter from 1 to 7: 3
+Enter the number of miles to convert: 1
+That is equal to 1.609 kilometers.
+
+1. Convert inches to centimeters.
+2. Convert feet to meters.
+3. Convert miles to kilometers.
+4. Convert kilometers to nautical miles.
+5. Convert kilometers to astromomical units.
+6. Convert meters to yards.
+7. QUIT
+
+Enter from 1 to 7: 4
+Enter the number of kilometers to convert: 1
+That is equal to 0.539956803 nautical miles.
+
+1. Convert inches to centimeters.
+2. Convert feet to meters.
+3. Convert miles to kilometers.
+4. Convert kilometers to nautical miles.
+5. Convert kilometers to astromomical units.
+6. Convert meters to yards.
+7. QUIT
+
+Enter from 1 to 7: 5
+Enter the number of kilometers to convert: 1
+That is equal to 6.684590000000001E-9 astronomical units.
+
+1. Convert inches to centimeters.
+2. Convert feet to meters.
+3. Convert miles to kilometers.
+4. Convert kilometers to nautical miles.
+5. Convert kilometers to astromomical units.
+6. Convert meters to yards.
+7. QUIT
+
+Enter from 1 to 7: 6
+Enter the number of meters to convert: 1
+That is equal to 1.09361 yards.
+
+1. Convert inches to centimeters.
+2. Convert feet to meters.
+3. Convert miles to kilometers.
+4. Convert kilometers to nautical miles.
+5. Convert kilometers to astromomical units.
+6. Convert meters to yards.
+7. QUIT
+
+Enter from 1 to 7: 7
+goodBye
+
+Geometry Calculator  (15 points)
+Write a program that displays the following menu:
+
+   Geometry Calculator
+
+1. Calculate the area of a Circle
+
+2. Calculate the area of a Rectangle
+
+3. Calculate the area of a Triangle
+
+4. End the program.
+
+Enter your selection:
+
+If the user enters 1, the program should ask for the radius of the circle and then display the area.  Use the following formula to calculate the circle’s area.
+
+area = PI * r * r
+
+Use 3.14159 for PI and the radius of the circle for r.
+
+If the user enters 2, the program should ask for the length and width of the rectangle, and then display the rectangle’s area.  Use the following formula to calculate the rectangle’s area:
+
+area = length * width
+
+If the user enters 3, the program should ask for the length of the triangle’s base and its height, and then display its area.  Use the following formula to calculate the area of the triangle:
+
+area = base * height * 0.5
+
+If the user enters 4, the program should end. 
